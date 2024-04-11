@@ -25,8 +25,11 @@
                 </a>
                 <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
                     <a href="/" class="mr-5 cursor-pointer hover:text-gray-900"><i class="fi fi-rr-home"></i> Home</a>
-                    <button><a href="/login" target="_blank"
-                        class="mr-5 cursor-pointer hover:text-gray-900"><i class="fi fi-rr-user"></i> Creator</a></button>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'auth_home' %}" class="mr-5 cursor-pointer hover:text-gray-900"><i class="fi fi-rr-user"></i> Creator</a>
+                {% else %}
+                    <a href="{% url 'login' %}" class="mr-5 cursor-pointer hover:text-gray-900"><i class="fi fi-rr-user"></i> Creator</a>
+                {% endif %}
                 </nav>
                 <a href="" target="_blank">
                     <button
@@ -220,29 +223,30 @@
     <footer class="text-gray-600 body-font">
         <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
             <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-                <img src="/static/assets/icons/sachit.jpg" alt="" srcset=""
-                    class="w-h-20 h-20 text-white p-2 stroke-slate-400 rounded-full">
+                <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                    <span class="ml-3 text-xl">OCR <i class="fi fi-rr-text"></i></span>
+                </a>
                 <span class="ml-3 text-xl">TEXT Extractor</span>
             </a>
             <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
-                Bhagyashree
+                Advanced_Boy_Shreyash
             </p>
 
             <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-                <a class="text-gray-500" href="https://www.Google.com" target="_blank">
+                <a class="text-gray-500" href="" target="_blank">
                     <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         class="w-5 h-5" viewBox="0 0 24 24">
                         <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
                     </svg>
                 </a>
-                <a class="ml-3 text-gray-500" href="https://www.instagram.com/sachhit_yadav/" target="_blank">
+                <a class="ml-3 text-gray-500" href="" target="_blank">
                     <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                         stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
                         <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
                         <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
                     </svg>
                 </a>
-                <a class="ml-3 text-gray-500" href="https://www.linkedin.com/in/sachit-yadav/" target="_blank">
+                <a class="ml-3 text-gray-500" href="" target="_blank">
                     <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                         stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
                         <path stroke="none"

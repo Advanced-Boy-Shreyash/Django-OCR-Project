@@ -7,6 +7,9 @@ from .forms import SignUpForm, EditProfileForm
 def home(request): 
 	return render(request, 'authenticate/home.html', {})
 
+def auth_home(request): 
+	return render(request, 'authenticate/auth_home.html', {})
+
 def login_user (request):
 	if request.method == 'POST': #if someone fills out form , Post it 
 		username = request.POST['username']
