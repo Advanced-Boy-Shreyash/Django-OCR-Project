@@ -78,4 +78,4 @@ This is a Django web application for extracting text from images using Tesseract
 
 Contributions to this project are welcome and encouraged! If you'd like to contribute, fork this repositor:
 
-`git clone https://github.com/ASACHIT/OCR-django-app.git`
+`git clone https://github.com/Advanced-Boy-Shreyash/Django-OCR-Project`
